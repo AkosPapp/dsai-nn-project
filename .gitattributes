@@ -1,1 +1,6 @@
 *.parquet filter=lfs diff=lfs merge=lfs -text
+data/avg_dist.parquet filter=lfs diff=lfs merge=lfs -text
+data/m1_results.parquet filter=lfs diff=lfs merge=lfs -text
+data/m1_training.parquet filter=lfs diff=lfs merge=lfs -text
+data/m2_results.parquet filter=lfs diff=lfs merge=lfs -text
+data/m2_training.parquet filter=lfs diff=lfs merge=lfs -text
