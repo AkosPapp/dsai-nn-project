@@ -1,4 +1,6 @@
 """Streamlit dashboard for NN-based sensor correction.
+- Akos Papp
+- Imam Alam
 
 Loads the ONNX model from MLflow Model Registry and provides:
 - interactive input table for 50 samples (time, x, y, z)
