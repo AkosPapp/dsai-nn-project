@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  mlflow:
+    image: openeuler/mlflow
+    container_name: my-mlflow
+    working_dir: /mlflow
+    user: "0:0"
+    # volumes:
+      # - ./mlruns:/mlflow/mlruns
+      # - ./mlflow_artifacts:/mlflow/mlflow_artifacts
+    ports:
+      - "5000:5000"
+    command: >
+             mlflow server
+             --host 0.0.0.0
+             --port 5000
+             --backend-store-uri sqlite:////mlflow/mlruns/mlflow.db
+             --default-artifact-root /mlflow/mlflow_artifacts
+             --serve-artifacts
+             --artifacts-destination /mlflow/mlflow_artifacts
